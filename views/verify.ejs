@@ -1,0 +1,23 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body" border-success>
+            <h2 class="text-center mb-3"><img src="/images/logo.png" alt="" width="100" height="100"></h2>
+            <h2 class="text-center mb-3"> Verify Certificate</h2>
+            <hr>
+            <%- include ("./partials/messages") %>
+            <form action="/verify-certificate" method="POST">
+                <div class="form-group">
+                    <label for="certificateNumber">
+                        <h5>Certificate Serial Number</h5>
+                    </label>
+                    <input type="certificateNumber" id="certificateNumber" name="certificateNumber" class="form-control"
+                        placeholder="Enter Certificate Serial Number" />
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Verify</button>
+            </form>
+            <p class="lead mt-4">
+            <h6>Go back?<a href="/dashboard"> Home</h6></a>
+            </p>
+        </div>
+    </div>
+</div>

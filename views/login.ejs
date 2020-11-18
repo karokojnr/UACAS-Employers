@@ -1,0 +1,29 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <h2 class="text-center mb-3">UACAS</h2>
+    <div class="card card-body" border-success>
+      <h2 class="text-center mb-3"><img src="/images/logo.png" alt="" width="100" height="100"></h2>
+      <h2 class="text-center mb-3">Login:</h2>
+      <hr>
+      <%- include ("./partials/messages") %>
+      <form action="/users/login" method="POST">
+        <div class="form-group">
+          <label for="email">
+            <h5>Email</h5>
+          </label>
+          <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" />
+        </div>
+        <div class="form-group">
+          <label for="password">
+            <h5>Password</h5>
+          </label>
+          <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password" />
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Login</button>
+      </form>
+      <p class="lead mt-4">
+      <h6>No Account? <a href="/users/register">Register</h6></a>
+      </p>
+    </div>
+  </div>
+</div>

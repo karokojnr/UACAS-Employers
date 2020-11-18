@@ -1,0 +1,72 @@
+<div class="container-fluid">
+    <main>
+        <p class="lead mb-3">
+        <h1>Results</h1>
+        </p>
+        <a href="/verify" class="btn btn-secondary">Verify More...</a>
+        <p></p>
+
+        <div><%- include ("./partials/messages") %></div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        <h5>Field</h5>
+                    </th>
+                    <th>
+                        <h5>Description</h5>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (certificate) { %>
+                <tr>
+                    <td>
+                        <h5>Certificate Number</h5>
+                    </td>
+                    <td><%= certificate.certificateNumber %></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>Surname</h5>
+                    </td>
+                    <td><%= certificate.surname %></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>Other Names</h5>
+                    </td>
+                    <td><%= certificate.otherNames %></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>Institution</h5>
+                    </td>
+                    <td><%= certificate.institution.institutionName %></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>Registration Number</h5>
+                    </td>
+                    <td><%= certificate.regNumber %></td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5>Course</h5>
+                    </td>
+                    <td><%= certificate.course.courseName %></td>
+                </tr>
+                <% } else { %>
+                <h1>Certificate Not Found!</h1>
+                <% } %>
+            </tbody>
+
+        </table>
+        <a href="/" class="btn btn-success">Home</a>
+        <a href="/users/logout" class="btn btn-danger">Logout</a>
+    </main>
+
+
+
+</div>
+<!-- /.container-fluid -->
