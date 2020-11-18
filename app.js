@@ -7,9 +7,14 @@ const session = require("express-session");
 const passport = require("passport");
 const chalk = require("chalk");
 const bodyParser = require('body-parser');
+const dotenv = require('dotenv');
+
 
 
 const app = express();
+
+dotenv.config();
+
 //Passport config
 require("./config/passport")(passport);
 // DB config
